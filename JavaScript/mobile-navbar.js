@@ -1,12 +1,12 @@
 const menuMobile = document.querySelector('.menu-mobile');
 const canto = document.querySelector('.canto');
-const secoes = document.querySelectorAll('.secao'); // Seleciona todas as seções
+const main = document.querySelector('main');
 
 menuMobile.addEventListener('click', () => {
     canto.classList.toggle('active'); // Mostra ou esconde a navbar
     if (canto.classList.contains('active')) {
-        secoes.forEach(secao => secao.classList.remove('menu-active')); // Remove a classe de todas as seções
+        main.classList.remove('menu-active'); // Remove a classe se o menu está ativo
     } else {
-        secoes.forEach(secao => secao.classList.add('menu-active')); // Adiciona a classe a todas as seções
+        main.classList.add('menu-active'); // Adiciona a classe se o menu não está ativo
     }
 });

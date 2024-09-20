@@ -7,6 +7,10 @@ body {
     box-sizing: border-box;
 }
 
+main {
+    margin-left: 19%;
+}
+
 header {
     background-color: #000000;
     color: #c5c9d6;
@@ -80,7 +84,6 @@ h3, h2 {
 .secao {
     padding: 50px 20px;
     background-color: #131417;
-    margin-left: 270px;
 }
 
 .container {
@@ -270,11 +273,17 @@ span.projeto-titulo {
     .canto.active {
         transform: translateX(0);
     }
-    .secao.menu-active {
+    main.menu-active {
         margin-left: 10px;
-        position: relative;
-        transform: translateX(0);
     }
+
+    main {
+        margin: 0 10px;
+    }
+    .canto.active + .main-container {
+        margin-left: 250px; /* Empurra o conteúdo para a direita quando o menu está ativo */
+    }
+    
     .menu-mobile {
         display: block;
     }
