@@ -31,7 +31,7 @@ h3, h2 {
     color: #c5c9d6;
 }
 
-nav {
+.canto {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -46,27 +46,27 @@ nav {
     box-sizing: border-box;
 }
 
-nav ul.lista {
+.canto ul.lista {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-nav ul.lista li {
+.canto ul.lista li {
     margin-bottom: 20px;
 }
 
-nav ul.lista li a {
+.canto ul.lista li a {
     color: #c5c9d6;
     text-decoration: none;
     font-size: 1.2em;
 }
 
-nav ul.lista li a:hover {
+.canto ul.lista li a:hover {
     text-decoration: underline;
 }
 
-nav::before {
+.canto::before {
     content: '';
     position: fixed;
     top: 0;
@@ -218,4 +218,64 @@ span.projeto-titulo {
 .btn-primary:active {
     background-color: #ffffff;
     color: #000;
+}
+
+.menu-mobile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.menu-mobile div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.canto {
+    position: fixed;
+    top: 0;
+    right: 0; /* Garantindo que fique à direita */
+    width: 250px;
+    height: 100%;
+    background-color: #1e1f26;
+    padding: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease-in;
+}
+
+.lista {
+    list-style: none;
+    padding: 0;
+}
+
+.lista li {
+    margin-bottom: 20px;
+}
+
+.lista li a {
+    color: #c5c9d6;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+@media (max-width: 999px) {
+    .canto {
+        transform: translateX(-100%);
+    }
+    .canto.active {
+        transform: translateX(0);
+    }
+    .secao.menu-active {
+        margin-left: 10px;
+        position: relative;
+        transform: translateX(0);
+    }
+    .menu-mobile {
+        display: block;
+    }
 }
