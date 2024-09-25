@@ -113,6 +113,9 @@ h3, h2 {
     float: left;
     margin-right: 20px;
     max-width: 150px;
+    margin-top: -3%;
+    width: 300px;
+    height: 200px;
 }
 
 .imagem-direita {
@@ -229,16 +232,6 @@ span.projeto-titulo {
     right: 20px;
     display: none;
     cursor: pointer;
-    background-color: #ffffff77;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-mobile img {
-    width: 100%;
-    height: auto;
 }
 
 .menu-mobile div {
@@ -252,7 +245,7 @@ span.projeto-titulo {
 .canto {
     position: fixed;
     top: 0;
-    right: 0; /* Garantindo que fique à direita */
+    right: 0;
     width: 250px;
     height: 100%;
     background-color: #1e1f26;
@@ -291,7 +284,7 @@ span.projeto-titulo {
         margin: 0 10px;
     }
     .canto.active + .main-container {
-        margin-left: 250px; /* Empurra o conteúdo para a direita quando o menu está ativo */
+        margin-left: 250px;
     }
     
     .menu-mobile {
