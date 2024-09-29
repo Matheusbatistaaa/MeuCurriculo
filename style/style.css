@@ -87,17 +87,27 @@ h3, h2 {
 }
 
 .container:hover {
-    transform: translateZ(10px);
-    border-color: #ffffff;
     background-color: #1e1f26;
+    border: #ffffff83 solid 0.01px;
 }
 
-.container:hover .card{
+.container:hover {
+    animation: saltar 0.5s ease-in-out;
+}
+
+@keyframes saltar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.container:hover .card, .card p{
     background-color: #131417;
+    color: #ffffff;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
